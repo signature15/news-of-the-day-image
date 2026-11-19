@@ -1,3 +1,4 @@
+import { join } from 'node:path';
 /**
  * News of the Day Image Contest Entry
  *
@@ -20,11 +21,12 @@
  * automated evaluation environment.
  */
 
-import { copyFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { copyFileSync, mkdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
-const sourceFile = new URL('./entry.png', import.meta.url).pathname;
+const sourceFile = fileURLToPath(new URL('./entry.png', import.meta.url));
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR || '/output';
 const outputFile = join(outputDir, 'entry.png');
+mkdirSync(outputDir, { recursive: true });
 
 copyFileSync(sourceFile, outputFile);
