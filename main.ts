@@ -2,9 +2,10 @@
  * News of the Day Image Contest Entry
  *
  * This program copies the pre-rendered entry.png file to the output directory,
- * producing a deterministic news-day broadsheet showing the world's news from
- * Wednesday 18 November 2026: 30 stories across 7 regions, day-in-numbers strip,
- * and regional story cards.
+ * producing a deterministic news-day broadsheet ("The Global Ledger") showing
+ * the world's news from Wednesday 18 November 2026: 30 stories across 7 regions,
+ * a day-in-numbers strip, and stories grouped into overnight/morning/afternoon/
+ * evening sections.
  *
  * Determinism: Two consecutive runs produce byte-for-byte identical output since
  * the source image is static and the operation is a simple file copy with no
